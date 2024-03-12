@@ -13,7 +13,7 @@ Route::get('/contatti', function () {
 Route::get('/chi-sono', function () {
     return view('chi-sono', [
         'h1title' => 'Who are we and what do we do?',
-        'descrizione' => 'Our group deals with web development, we are specialized in the sector for over 45 years, we work with seriousness and professionalism without ever lacking in humility.'
+        'descrizione' => 'Our group deals with web development, we are specialized in the sector for over 45 years, we work with seriousness and professionalism without ever lacking in humility!'
     ]);
 });
 
