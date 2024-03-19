@@ -1,19 +1,15 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PageController::class,'homePage'])->name('welcome');
 
-Route::get('/contatti', function () {
-    return view('contatti', ['title' => 'Contacts us in this email: _____@gmail.com!']);
-});
+Route::get('/contacts',[PageController::class,'contacts'] )->name('contacts');
 
-Route::get('/chi-sono', function () {
-    return view('chi-sono', [
-        'h1title' => 'Who are we and what do we do?',
-        'descrizione' => 'Our group deals with web development, we are specialized in the sector for over 45 years, we work with seriousness and professionalism without ever lacking in humility!'
-    ]);
-});
+Route::get('/about-me',[PageController::class,'aboutMe'])->name('about-me');
 
+
+Route::get('/articles',[PageController::class,'articles'])->name('articles');
+
+Route::get('/articolo/{article?}',[PageController::class,'article'])->name('article');
