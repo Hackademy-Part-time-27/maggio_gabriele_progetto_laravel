@@ -8,7 +8,7 @@
                     @if($article['visible'])
                     <x-card
                     :index="$index"
-                    :title="$article['titlearticles']"
+                    :title="$article['title']"
                     :description="$article['description']"
                     :category="$article['category']"
                     :route="route('article', $index)"
